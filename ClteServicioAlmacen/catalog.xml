@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://148.205.38.104:8080/ServicioAlmacen/ServicioAlmacen?WSDL" uri="xml-resources/web-service-references/ServicioAlmacen/wsdl/148.205.38.104_8080/ServicioAlmacen/ServicioAlmacen.wsdl"/>
+    <system systemId="http://148.205.38.104:8080/ServicioAlmacen/ServicioAlmacen?xsd=1" uri="xml-resources/web-service-references/ServicioAlmacen/wsdl/148.205.38.104_8080/ServicioAlmacen/ServicioAlmacen.xsd_1.xsd"/>
+</catalog>

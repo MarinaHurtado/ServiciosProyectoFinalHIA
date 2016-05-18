@@ -28,6 +28,7 @@ public class ServicioPago {
         // Generamos un id de factura (num. autorización):
         Random rnd = new Random();
         return "NumAut. "+rnd.nextInt(10000);
+	//return "Num. bhjklbgh";
     }
 
 }

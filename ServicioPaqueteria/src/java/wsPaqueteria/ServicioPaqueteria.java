@@ -24,10 +24,10 @@ public class ServicioPaqueteria {
     
     @WebMethod(operationName = "enviarProducto")
     public String enviarProducto(@WebParam(name = "empresa") String empresa, @WebParam(name = "numAut")
-    int numAut) {
+    String numAut) {
 	String fecha="";
 	try{	    
-	    if (empresa != null && numAut >= 1){
+	    if (empresa != null && numAut != null){
 		Random rnd = new Random();
 		int numEntrega = rnd.nextInt(1000)+1;
 	

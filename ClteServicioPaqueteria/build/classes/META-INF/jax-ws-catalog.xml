@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:9080/VentaLibrosWSDLService/VentaLibrosWSDLPort?WSDL" uri="wsdl/localhost_9080/VentaLibrosWSDLService/VentaLibrosWSDLPort.wsdl"/>
+    <system systemId="http://148.205.38.104:8080/ServicioPaqueteria/ServicioPaqueteria?WSDL" uri="wsdl/148.205.38.104_8080/ServicioPaqueteria/ServicioPaqueteria.wsdl"/>
+    <system systemId="http://148.205.38.104:8080/ServicioPaqueteria/ServicioPaqueteria?xsd=1" uri="wsdl/148.205.38.104_8080/ServicioPaqueteria/ServicioPaqueteria.xsd_1.xsd"/>
+</catalog>

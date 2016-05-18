@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://148.205.38.104:8080/ServicioPaqueteria/ServicioPaqueteria?WSDL" uri="wsdl/148.205.38.104_8080/ServicioPaqueteria/ServicioPaqueteria.wsdl"/>
+    <system systemId="http://148.205.38.104:8080/ServicioPaqueteria/ServicioPaqueteria?xsd=1" uri="wsdl/148.205.38.104_8080/ServicioPaqueteria/ServicioPaqueteria.xsd_1.xsd"/>
+    <system systemId="http://148.205.38.104:8080/ServicioEstadisticas/ServicioEstadisticas?WSDL" uri="wsdl/148.205.38.104_8080/ServicioEstadisticas/ServicioEstadisticas.wsdl"/>
+    <system systemId="http://148.205.38.104:8080/ServicioEstadisticas/ServicioEstadisticas?xsd=1" uri="wsdl/148.205.38.104_8080/ServicioEstadisticas/ServicioEstadisticas.xsd_1.xsd"/>
+</catalog>
