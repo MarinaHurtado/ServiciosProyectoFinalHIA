@@ -105,7 +105,7 @@ public class ServicioEstadisticas {
 	
         try{
 //	    for (int i = 0; i < 3; i++) {
-	    int i = 0;
+	    int i = 1;
 		double promedioCltes = (double)(sumaNormalCltes[i] / numTotalTransacciones[i]);
 		double promMulNumTrans = (double)(Math.pow(promedioCltes, 2)*numTotalTransacciones[i]);
 		double desvEstCltes = (double)(Math.sqrt(sumaCuadradosCltes[i] - promMulNumTrans)/(numTotalTransacciones[i] - 1));

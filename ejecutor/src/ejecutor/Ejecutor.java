@@ -24,7 +24,7 @@ public class Ejecutor {
 	String servicio = "";
 	if (args.length > 0) {
 	    if (args[0].equals("1")) {
-		servicio = "ClientePago";
+		servicio = "ClientePago_Estad";
 	    } else if (args[0].equals("2")) {
 		servicio = "ClteServicioPaqueteria_Estad";
 	    } else {
