@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package wsPaqueteria;
 
 import javax.jws.WebService;
@@ -34,7 +29,7 @@ public class ServicioPaqueteria {
 	try{	    
 	    if (empresa != null && numAut >= 1){
 		Random rnd = new Random();
-		int numEntrega = rnd.nextInt(15)+1;
+		int numEntrega = rnd.nextInt(1000)+1;
 	
 		Date dNow = new Date( );
 		SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
