@@ -45,8 +45,8 @@ public class ServicioEstadisticas {
 	}
 	for (int i = 0; i < 3; i++) {
 	    cuantosVan[i] = 0;
-	    sumaNormalCltes[i] = -1000;
-	    sumaCuadradosCltes[i] = -1000;
+	    sumaNormalCltes[i] = 0;
+	    sumaCuadradosCltes[i] = 0;
 	    minDeltaT[i] = -1000;
 	    maxDeltaT[i] = -1000;
 	    maxTpoCltes[i] = Long.MIN_VALUE;
@@ -107,11 +107,15 @@ public class ServicioEstadisticas {
 //	    for (int i = 0; i < 3; i++) {
 	    int i = 2;
 		double promedioCltes = (double)(sumaNormalCltes[i] / numTotalTransacciones[i]);
+//		   resultado += "\nPromedio cltes: "+promedioCltes+"\n";
 		double promMulNumTrans = (double)(Math.pow(promedioCltes, 2)*numTotalTransacciones[i]);
+//		    resultado += "\nPromedio MulNumTrans: "+promMulNumTrans+"\n";
+//		   resultado += "\nSuma Cuadrados: "+sumaCuadradosCltes[i]+"\n";
+//		   resultado += "\nnumTotalTrans: "+numTotalTransacciones[i]+"\n";
 		double desvEstCltes = (double)(Math.sqrt(sumaCuadradosCltes[i] - promMulNumTrans)/(numTotalTransacciones[i] - 1));
-		resultado += "\nTotal clientes del servicio "+i+": "+cuantosVan[i]+"\nPromedio total: "+promedioCltes+" nanos"
-                                +"\nDesvEst total: "+desvEstCltes+" nanos"
-                                +"\nMinimo deltaT: "+minTpoCltes[i]+" nanos\nMaximo deltaT: "+maxTpoCltes[i]+" nanos\n";
+		resultado += "\nTotal clientes del servicio "+i+": "+cuantosVan[i]+"\nPromedio total: "+promedioCltes+" ms"
+                                +"\nDesvEst total: "+desvEstCltes+" ms"
+                                +"\nMinimo deltaT: "+minTpoCltes[i]+" ms\nMaximo deltaT: "+maxTpoCltes[i]+" ms\n";
 		System.out.println(resultado);
 //	    }
             

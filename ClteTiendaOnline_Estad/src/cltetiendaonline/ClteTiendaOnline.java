@@ -43,7 +43,7 @@ public class ClteTiendaOnline {
 	
 	Random rn = new Random();
 	int prodRn = rn.nextInt(productos.length);
-	unidades = rn.nextInt(200)+1;
+	unidades = 100;
 	
 //	System.out.println(productos[prodRn]);
 //	System.out.println(""+precioUnidad[prodRn]);
@@ -58,17 +58,22 @@ public class ClteTiendaOnline {
 	deltaT1 = (t1 - t0);   // milisegundos
 	
 	for(int i=0; i<n; i++){
-            t0 = System.nanoTime();
+            t0 = System.currentTimeMillis();
             String res = tiendaOnlineWSDLOperation(productos[prodRn], idCliente, unidades, precioUnidad[prodRn],port);
-            dtc = System.nanoTime();
+            dtc = System.currentTimeMillis();
 	    
+//	    System.out.println(res);
 	    stad.sumasCliente(t0,dtc);
         }
 	
 	stad.imprimeInfoClte();
         datosClientes(2,stad.sumaNormal,stad.sumaCuadrados,stad.minTiempo,stad.maxTiempo,n);
-	
+	try {
+	    Thread.sleep(1000);
 //	System.out.println(res);
+	} catch (InterruptedException ex) {
+	    Logger.getLogger(ClteTiendaOnline.class.getName()).log(Level.SEVERE, null, ex);
+	}
     }
 
     private static String tiendaOnlineWSDLOperation(java.lang.String producto, java.lang.String idCliente, int unidades, int precioUnidad) {

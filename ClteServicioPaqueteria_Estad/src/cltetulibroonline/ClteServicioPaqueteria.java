@@ -63,15 +63,21 @@ public class ClteServicioPaqueteria {
         String numAut = ""+(r.nextInt(1000)+1);
         
         for(int i=0; i<n; i++){
-            t0 = System.nanoTime();
+            t0 = System.currentTimeMillis();
             String res = enviarProducto2(empresa, numAut, port);
-            dtc = System.nanoTime();
+            dtc = System.currentTimeMillis();
 	    
 	    stad.sumasCliente(t0,dtc);
         }
 	
 	stad.imprimeInfoClte();
         datosClientes(2,stad.sumaNormal,stad.sumaCuadrados,stad.minTiempo,stad.maxTiempo,n);
+	
+	try {
+	    Thread.sleep(1000);
+	} catch (InterruptedException ex) {
+	    Logger.getLogger(ClteServicioPaqueteria.class.getName()).log(Level.SEVERE, null, ex);
+	}
     }
 
     private static long lapsoAlInicioEnMillis() {

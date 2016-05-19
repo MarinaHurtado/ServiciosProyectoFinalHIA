@@ -54,21 +54,6 @@ public interface ServicioEstadisticas {
 
     /**
      * 
-     * @param servicio
-     * @return
-     *     returns int
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "quienSoy", targetNamespace = "http://wsEstadisticas/", className = "wsestadisticas.QuienSoy")
-    @ResponseWrapper(localName = "quienSoyResponse", targetNamespace = "http://wsEstadisticas/", className = "wsestadisticas.QuienSoyResponse")
-    @Action(input = "http://wsEstadisticas/ServicioEstadisticas/quienSoyRequest", output = "http://wsEstadisticas/ServicioEstadisticas/quienSoyResponse")
-    public int quienSoy(
-        @WebParam(name = "servicio", targetNamespace = "")
-        int servicio);
-
-    /**
-     * 
      * @param lapsoEnSegundos
      * @return
      *     returns boolean
@@ -84,18 +69,30 @@ public interface ServicioEstadisticas {
 
     /**
      * 
-     * @param name
+     * @param servicio
      * @return
-     *     returns java.lang.String
+     *     returns int
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "hello", targetNamespace = "http://wsEstadisticas/", className = "wsestadisticas.Hello")
-    @ResponseWrapper(localName = "helloResponse", targetNamespace = "http://wsEstadisticas/", className = "wsestadisticas.HelloResponse")
-    @Action(input = "http://wsEstadisticas/ServicioEstadisticas/helloRequest", output = "http://wsEstadisticas/ServicioEstadisticas/helloResponse")
-    public String hello(
-        @WebParam(name = "name", targetNamespace = "")
-        String name);
+    @RequestWrapper(localName = "quienSoy", targetNamespace = "http://wsEstadisticas/", className = "wsestadisticas.QuienSoy")
+    @ResponseWrapper(localName = "quienSoyResponse", targetNamespace = "http://wsEstadisticas/", className = "wsestadisticas.QuienSoyResponse")
+    @Action(input = "http://wsEstadisticas/ServicioEstadisticas/quienSoyRequest", output = "http://wsEstadisticas/ServicioEstadisticas/quienSoyResponse")
+    public int quienSoy(
+        @WebParam(name = "servicio", targetNamespace = "")
+        int servicio);
+
+    /**
+     * 
+     * @return
+     *     returns long
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "lapsoAlInicioEnMillis", targetNamespace = "http://wsEstadisticas/", className = "wsestadisticas.LapsoAlInicioEnMillis")
+    @ResponseWrapper(localName = "lapsoAlInicioEnMillisResponse", targetNamespace = "http://wsEstadisticas/", className = "wsestadisticas.LapsoAlInicioEnMillisResponse")
+    @Action(input = "http://wsEstadisticas/ServicioEstadisticas/lapsoAlInicioEnMillisRequest", output = "http://wsEstadisticas/ServicioEstadisticas/lapsoAlInicioEnMillisResponse")
+    public long lapsoAlInicioEnMillis();
 
     /**
      * 
@@ -111,14 +108,17 @@ public interface ServicioEstadisticas {
 
     /**
      * 
+     * @param name
      * @return
-     *     returns long
+     *     returns java.lang.String
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "lapsoAlInicioEnMillis", targetNamespace = "http://wsEstadisticas/", className = "wsestadisticas.LapsoAlInicioEnMillis")
-    @ResponseWrapper(localName = "lapsoAlInicioEnMillisResponse", targetNamespace = "http://wsEstadisticas/", className = "wsestadisticas.LapsoAlInicioEnMillisResponse")
-    @Action(input = "http://wsEstadisticas/ServicioEstadisticas/lapsoAlInicioEnMillisRequest", output = "http://wsEstadisticas/ServicioEstadisticas/lapsoAlInicioEnMillisResponse")
-    public long lapsoAlInicioEnMillis();
+    @RequestWrapper(localName = "hello", targetNamespace = "http://wsEstadisticas/", className = "wsestadisticas.Hello")
+    @ResponseWrapper(localName = "helloResponse", targetNamespace = "http://wsEstadisticas/", className = "wsestadisticas.HelloResponse")
+    @Action(input = "http://wsEstadisticas/ServicioEstadisticas/helloRequest", output = "http://wsEstadisticas/ServicioEstadisticas/helloResponse")
+    public String hello(
+        @WebParam(name = "name", targetNamespace = "")
+        String name);
 
 }

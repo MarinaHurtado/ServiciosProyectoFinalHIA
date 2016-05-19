@@ -7,29 +7,17 @@
 <message name="datosClientes">
 <part name="parameters" element="tns:datosClientes"/>
 </message>
-<message name="quienSoy">
-<part name="parameters" element="tns:quienSoy"/>
-</message>
-<message name="quienSoyResponse">
-<part name="parameters" element="tns:quienSoyResponse"/>
-</message>
 <message name="blnReset">
 <part name="parameters" element="tns:blnReset"/>
 </message>
 <message name="blnResetResponse">
 <part name="parameters" element="tns:blnResetResponse"/>
 </message>
-<message name="hello">
-<part name="parameters" element="tns:hello"/>
+<message name="quienSoy">
+<part name="parameters" element="tns:quienSoy"/>
 </message>
-<message name="helloResponse">
-<part name="parameters" element="tns:helloResponse"/>
-</message>
-<message name="resultadosEstadisticas">
-<part name="parameters" element="tns:resultadosEstadisticas"/>
-</message>
-<message name="resultadosEstadisticasResponse">
-<part name="parameters" element="tns:resultadosEstadisticasResponse"/>
+<message name="quienSoyResponse">
+<part name="parameters" element="tns:quienSoyResponse"/>
 </message>
 <message name="lapsoAlInicioEnMillis">
 <part name="parameters" element="tns:lapsoAlInicioEnMillis"/>
@@ -37,29 +25,41 @@
 <message name="lapsoAlInicioEnMillisResponse">
 <part name="parameters" element="tns:lapsoAlInicioEnMillisResponse"/>
 </message>
+<message name="resultadosEstadisticas">
+<part name="parameters" element="tns:resultadosEstadisticas"/>
+</message>
+<message name="resultadosEstadisticasResponse">
+<part name="parameters" element="tns:resultadosEstadisticasResponse"/>
+</message>
+<message name="hello">
+<part name="parameters" element="tns:hello"/>
+</message>
+<message name="helloResponse">
+<part name="parameters" element="tns:helloResponse"/>
+</message>
 <portType name="ServicioEstadisticas">
 <operation name="datosClientes">
 <input wsam:Action="http://wsEstadisticas/ServicioEstadisticas/datosClientes" message="tns:datosClientes"/>
-</operation>
-<operation name="quienSoy">
-<input wsam:Action="http://wsEstadisticas/ServicioEstadisticas/quienSoyRequest" message="tns:quienSoy"/>
-<output wsam:Action="http://wsEstadisticas/ServicioEstadisticas/quienSoyResponse" message="tns:quienSoyResponse"/>
 </operation>
 <operation name="blnReset">
 <input wsam:Action="http://wsEstadisticas/ServicioEstadisticas/blnResetRequest" message="tns:blnReset"/>
 <output wsam:Action="http://wsEstadisticas/ServicioEstadisticas/blnResetResponse" message="tns:blnResetResponse"/>
 </operation>
-<operation name="hello">
-<input wsam:Action="http://wsEstadisticas/ServicioEstadisticas/helloRequest" message="tns:hello"/>
-<output wsam:Action="http://wsEstadisticas/ServicioEstadisticas/helloResponse" message="tns:helloResponse"/>
+<operation name="quienSoy">
+<input wsam:Action="http://wsEstadisticas/ServicioEstadisticas/quienSoyRequest" message="tns:quienSoy"/>
+<output wsam:Action="http://wsEstadisticas/ServicioEstadisticas/quienSoyResponse" message="tns:quienSoyResponse"/>
+</operation>
+<operation name="lapsoAlInicioEnMillis">
+<input wsam:Action="http://wsEstadisticas/ServicioEstadisticas/lapsoAlInicioEnMillisRequest" message="tns:lapsoAlInicioEnMillis"/>
+<output wsam:Action="http://wsEstadisticas/ServicioEstadisticas/lapsoAlInicioEnMillisResponse" message="tns:lapsoAlInicioEnMillisResponse"/>
 </operation>
 <operation name="resultadosEstadisticas">
 <input wsam:Action="http://wsEstadisticas/ServicioEstadisticas/resultadosEstadisticasRequest" message="tns:resultadosEstadisticas"/>
 <output wsam:Action="http://wsEstadisticas/ServicioEstadisticas/resultadosEstadisticasResponse" message="tns:resultadosEstadisticasResponse"/>
 </operation>
-<operation name="lapsoAlInicioEnMillis">
-<input wsam:Action="http://wsEstadisticas/ServicioEstadisticas/lapsoAlInicioEnMillisRequest" message="tns:lapsoAlInicioEnMillis"/>
-<output wsam:Action="http://wsEstadisticas/ServicioEstadisticas/lapsoAlInicioEnMillisResponse" message="tns:lapsoAlInicioEnMillisResponse"/>
+<operation name="hello">
+<input wsam:Action="http://wsEstadisticas/ServicioEstadisticas/helloRequest" message="tns:hello"/>
+<output wsam:Action="http://wsEstadisticas/ServicioEstadisticas/helloResponse" message="tns:helloResponse"/>
 </operation>
 </portType>
 <binding name="ServicioEstadisticasPortBinding" type="tns:ServicioEstadisticas">
@@ -70,15 +70,6 @@
 <soap:body use="literal"/>
 </input>
 </operation>
-<operation name="quienSoy">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="blnReset">
 <soap:operation soapAction=""/>
 <input>
@@ -88,7 +79,16 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="hello">
+<operation name="quienSoy">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="lapsoAlInicioEnMillis">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -106,7 +106,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="lapsoAlInicioEnMillis">
+<operation name="hello">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

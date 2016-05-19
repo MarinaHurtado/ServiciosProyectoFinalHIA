@@ -32,8 +32,10 @@ public class Ejecutor {
 	    } else {
 		servicio = "ClteTiendaOnline_Estad";
 	    }
-	    if (args.length > 1)    // Revisar si hay número de clientes
-		numCltes = Integer.parseInt(args[1]);
+	}
+	if (args.length > 1) {   // Revisar si hay número de clientes
+	    System.out.println("Sí hay");
+	    numCltes = Integer.parseInt(args[1]);
 	}
 		
         for (int clte = 1; clte <= numCltes; clte++) {

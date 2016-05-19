@@ -43,7 +43,9 @@ public class ServicioAlmacen {
 		if(cantDisp>=cantReq){
 		    int temp = cantDisp-cantReq;
 		    s.executeUpdate("UPDATE [PRODUCTO] SET [CantProd]="+temp+" WHERE Producto.NomProd='"+nomProd+"';");
+		    s.close();
 		    System.out.println("Se actualizó la base de datos!");
+		    conn.commit();
 		    conn.close();
 		    return true;
 		}conn.close();
@@ -74,7 +76,9 @@ public class ServicioAlmacen {
 		System.out.println("Cant disp de " + nomProd + ": " + cantDisp);
 		int temp = cantDisp+cantProd;
 		s.executeUpdate("UPDATE [PRODUCTO] SET [CantProd]="+temp+" WHERE Producto.NomProd='"+nomProd+"';");
+		s.close();
 		System.out.println("Se actualizó la base de datos!");
+		conn.commit();
 		conn.close();
 		return true;		
 	    }

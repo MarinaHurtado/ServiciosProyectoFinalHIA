@@ -23,7 +23,7 @@ public class ClteServicioAlmacen {
 	Estadisticas stad;
 	
 	soyCliente = quienSoy(0);
-        int N = 5; // número de transacciones
+        int N = 10; // número de transacciones
 	stad = new Estadisticas(N);
 	
 	long deltaTAlInicioEnMillis = lapsoAlInicioEnMillis();
@@ -52,19 +52,25 @@ public class ClteServicioAlmacen {
         int cantProd = 0;
 	
         for (int i=0; i<N; i++){
-            t0=System.nanoTime();
+            t0=System.currentTimeMillis();
             //res=port.helloWorldOperation("Gus");
             
             port.checaDispProd(nomProd, cantReq);
             port.regresaCantProd(nomProd, cantProd);
             
-            dtc=System.nanoTime();
+            dtc=System.currentTimeMillis();
 	    
-	     stad.sumasCliente(t0,dtc);
+	    stad.sumasCliente(t0,dtc);
         }
 	
 	stad.imprimeInfoClte();
         datosClientes(0,stad.sumaNormal,stad.sumaCuadrados,stad.minTiempo,stad.maxTiempo,N);	
+	
+	try {
+	    Thread.sleep(1000);
+	} catch (InterruptedException ex) {
+	    Logger.getLogger(ClteServicioAlmacen.class.getName()).log(Level.SEVERE, null, ex);
+	}
     }
 
     private static boolean regresaCantProd(java.lang.String nomProd, int cantProd) {

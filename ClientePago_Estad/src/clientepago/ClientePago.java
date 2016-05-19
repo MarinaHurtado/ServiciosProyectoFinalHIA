@@ -51,15 +51,22 @@ public class ClientePago {
         int pago = r.nextInt(1000)+1;
         
         for(int i=0; i<n; i++){
-            t0 = System.nanoTime();
+            t0 = System.currentTimeMillis();
             String res = port.facturar(idCliente, pago);
-            dtc = System.nanoTime();
+            dtc = System.currentTimeMillis();
 	    
 	    stad.sumasCliente(t0,dtc);
         }
         
         stad.imprimeInfoClte();
         datosClientes(1,stad.sumaNormal,stad.sumaCuadrados,stad.minTiempo,stad.maxTiempo,n);
+
+	try {
+	    Thread.sleep(1000);
+	} catch (InterruptedException ex) {
+	    Logger.getLogger(ClientePago.class.getName()).log(Level.SEVERE, null, ex);
+	}
+
     }
 
     private static String facturar(java.lang.String idCliente, int cuantia) {
