@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://148.205.38.103:9080/TiendaOnlineWSDLService/TiendaOnlineWSDLPort?WSDL" uri="xml-resources/web-service-references/TiendaOnlineWSDLPort/wsdl/148.205.38.103_9080/TiendaOnlineWSDLService/TiendaOnlineWSDLPort.wsdl"/>
+    <system systemId="http://localhost:8080/ServicioEstadisticas/ServicioEstadisticas?WSDL" uri="xml-resources/web-service-references/ServicioEstadisticas/wsdl/localhost_8080/ServicioEstadisticas/ServicioEstadisticas.wsdl"/>
+    <system systemId="http://localhost:8080/ServicioEstadisticas/ServicioEstadisticas?xsd=1" uri="xml-resources/web-service-references/ServicioEstadisticas/wsdl/localhost_8080/ServicioEstadisticas/ServicioEstadisticas.xsd_1.xsd"/>
+</catalog>

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package clteservicioalmacen;
 
 import java.util.logging.Level;
@@ -28,7 +23,7 @@ public class ClteServicioAlmacen {
 	Estadisticas stad;
 	
 	soyCliente = quienSoy(0);
-        int N = 10; // número de transacciones
+        int N = 5; // número de transacciones
 	stad = new Estadisticas(N);
 	
 	long deltaTAlInicioEnMillis = lapsoAlInicioEnMillis();

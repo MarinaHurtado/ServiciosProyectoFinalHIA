@@ -27,8 +27,10 @@ public class Ejecutor {
 		servicio = "ClientePago_Estad";
 	    } else if (args[0].equals("2")) {
 		servicio = "ClteServicioPaqueteria_Estad";
-	    } else {
+	    } else if (args[0].equals("0")) {
 		servicio = "ClteServicioAlmacen_Estad";
+	    } else {
+		servicio = "ClteTiendaOnline_Estad";
 	    }
 	    if (args.length > 1)    // Revisar si hay número de clientes
 		numCltes = Integer.parseInt(args[1]);
